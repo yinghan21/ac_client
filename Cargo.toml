@@ -1,0 +1,23 @@
+[package]
+name = "a"
+version = "0.1.0"
+edition = "2024"
+
+#[profile.dev]
+#opt-level = 1
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+imgui = "0.12.0"
+
+anyhow = "1"
+
+hudhook = "0.9"
+
+windows-sys = { version = "0.61", features = [
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_UI_WindowsAndMessaging",
+]}
